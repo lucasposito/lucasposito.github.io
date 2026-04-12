@@ -153,13 +153,24 @@ header {
     position: relative;
     width: 100%;
     min-height: auto;
-    @include background-cover;
-    background-position: center;
-    background-image: url('../img/header.jpg');
+    overflow: hidden;
     text-align: center;
     color: white;
+    .header-video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 0;
+        object-fit: cover;
+    }
     .header-content {
         position: relative;
+        z-index: 1;
         text-align: center;
         padding: 100px 15px 100px;
         width: 100%;
